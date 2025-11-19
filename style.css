@@ -311,8 +311,10 @@ a.category-card{
 
 .event-cat-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(2, 1fr);  /* Two columns: left + right */
+  gap: 40px 60px;  /* row-gap | column-gap */
+  max-width: 900px;
+  margin: 0 auto;  /* center the whole grid */
 }
 
 .event-cat-card {
@@ -344,12 +346,12 @@ a.category-card{
 
 /*FOOTER*/
 
-..footer {
+.footer {
   background: #4d2c21;
   color: #fdeee2;
   padding: 60px 8%;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  /*border-top-left-radius: 30px;
+  border-top-right-radius: 30px;*/
   margin-top: 80px;
 }
 
@@ -371,7 +373,7 @@ a.category-card{
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .footer-brand img {
