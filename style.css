@@ -261,7 +261,7 @@ body {
   display: flex;
   align-items: center;
 
-  background-image: url("event-banner.webp");
+  background-image: url("event-banner.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -285,13 +285,13 @@ body {
 .event-hero-text h1 {
   font-size: 48px;
   font-weight: 800;
-  color: #3E2000;
+  color: #ffffff;
   margin-bottom: 15px;
 }
 
 .event-hero-text p {
   font-size: 18px;
-  color: #4D2C09;
+  color: #ffffff;
   margin-bottom: 25px;
 }
 
@@ -370,6 +370,78 @@ body {
   font-size: 18px;
   font-weight: 600;
   color: #3E2000;
+}
+
+/* Popup Background */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Hidden Class */
+.hidden {
+  display: none;
+}
+
+/* Popup Box */
+.popup-inner {
+  background: white;
+  width: 360px;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  position: relative;
+  text-align: center;
+}
+
+/* Close Button */
+#close-catering {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Option Buttons */
+.catering-options button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  background: #6c63ff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.catering-options button:hover {
+  background: #584cff;
+}
+
+/* Confirm Button */
+.confirm-booking {
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+  background: #3E2000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.confirm-booking:hover {
+  background: #2d1600;
 }
 
 /*FOOTER*/
