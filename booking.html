@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+<section class="event-booking">
+
+  <h1>Book Your Event</h1>
+
+  <form class="booking-form">
+
+    <!-- Date & Time -->
+    <div class="form-card">
+      <h3>Date & Time</h3>
+      <input type="date" required>
+      <input type="time" required>
+    </div>
+
+    <!-- Number of People -->
+    <div class="form-card">
+      <h3>Number of Guests</h3>
+      <input type="number" placeholder="Enter number of guests" min="1" required>
+    </div>
+
+    <!-- Decoration Options -->
+    <div class="form-card">
+      <h3>Decoration Style</h3>
+      <select required>
+        <option value="">Select Style</option>
+        <option>Minimal</option>
+        <option>Elegant</option>
+        <option>Floral</option>
+        <option>Luxury Theme</option>
+      </select>
+    </div>
+
+    <!-- Catering -->
+    <div class="form-card">
+      <h3>Catering Type</h3>
+      <select id="catering-type" required>
+        <option value="">Choose</option>
+        <option>Traditional Bangladeshi</option>
+        <option>Indian</option>
+        <option>Continental</option>
+        <option>Mixed Buffet</option>
+      </select>
+    </div>
+
+    <!-- Buffet Yes/No -->
+    <div class="form-card">
+      <h3>Buffet</h3>
+      <label><input type="radio" name="buffet" value="Yes"> Yes</label>
+      <label><input type="radio" name="buffet" value="No"> No</label>
+    </div>
+
+    <!-- Add Food Items -->
+    <div class="form-card">
+      <h3>Food Items</h3>
+      <textarea placeholder="List the items you want..."></textarea>
+    </div>
+
+    <button class="submit-btn">Continue to Summary</button>
+
+  </form>
+
+</section>
+
+<script>
+  // Read the "event" from the URL
+  const params = new URLSearchParams(window.location.search);
+  const eventType = params.get("event");
+
+  // Change heading based on event
+  const title = document.querySelector(".event-booking h1");
+
+  if (eventType === "birthday") {
+    title.textContent = "Book Your Birthday Event";
+  } 
+  else if (eventType === "wedding") {
+    title.textContent = "Book Your Wedding Event";
+  } 
+  else if (eventType === "party") {
+    title.textContent = "Book Your Party Event";
+  } 
+  else {
+    title.textContent = "Book Your Event";
+  }
+</script>
+
+</body>
+</html>

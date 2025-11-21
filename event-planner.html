@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Event Planner</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="event-planner.css">
 </head>
 
 <body>
@@ -18,51 +18,30 @@
 
 
   <section class="event-categories">
-    <h2>Services</h2>
+  <h2>Options</h2>
 
-    <div class="event-cat-grid">
+  <div class="event-cat-grid">
 
-      <div class="event-cat-card" id="catering-card">
-        <img src="catering.jpg">
-          <p>Catering</p>
-      </div>
+    <a href="booking.html?event=party" class="event-cat-card">
+      <img src="party.webp">
+      <p>Party</p>
+    </a>
 
+    <a href="booking.html?event=birthday" class="event-cat-card">
+      <img src="birthday.webp">
+      <p>Birthday</p>
+    </a>
 
-      <div class="event-cat-card">
-        <img src="venue.jpg">
-        <p>Venues</p>
-      </div>
+    <a href="booking.html?event=wedding" class="event-cat-card">
+      <img src="wedding.webp">
+      <p>Wedding</p>
+    </a>
 
-      <div class="event-cat-card">
-        <img src="birthday.jpg">
-        <p>Birthday</p>
-      </div>
-
-      <div class="event-cat-card">
-        <img src="Wedding.jpg">
-        <p>Wedding</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Catering Booking Popup -->
-<div id="catering-popup" class="popup hidden">
-  <div class="popup-inner">
-    <span id="close-catering">&times;</span>
-    <h3>Select Catering Option</h3>
-
-    <div class="catering-options">
-      <button data-type="buffet">Buffet</button>
-      <button data-type="regular">Regular Seats</button>
-      <button data-type="vip">VIP Section</button>
-    </div>
-
-    <p id="catering-desc"></p>
-
-    <button class="confirm-booking">Confirm Booking</button>
   </div>
-</div>
+</section>
+
+
+  
 
 
   <footer class="footer">
@@ -119,34 +98,6 @@
 
 </footer>
 
-<script>
-const cateringCard = document.getElementById("catering-card");
-const popup = document.getElementById("catering-popup");
-const closePopup = document.getElementById("close-catering");
-const desc = document.getElementById("catering-desc");
-
-// Open popup when clicking catering card
-cateringCard.addEventListener("click", () => {
-  popup.classList.remove("hidden");
-  desc.textContent = "";
-});
-
-// Close popup when clicking "X"
-closePopup.addEventListener("click", () => {
-  popup.classList.add("hidden");
-});
-
-// Update description based on option
-document.querySelectorAll(".catering-options button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    let type = btn.dataset.type;
-
-    if (type === "buffet") desc.textContent = "Unlimited buffet system. Ideal for family or group events.";
-    if (type === "regular") desc.textContent = "Standard seat bookings with flexible timing.";
-    if (type === "vip") desc.textContent = "Private VIP dining area with premium service and privacy.";
-  });
-});
-</script>
 
 
 </body>
