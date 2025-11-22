@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+.categories h1{
+    text-align: center;
+    font-size: 275%;
+    padding: 1rem;
+    color: rgb(0, 0, 0);
+}
+.categories .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 2rem;
+}
+.categories .container {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem #c79c70;
+    border: 1rem solid rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+
+.categories .container .image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: -100%; left: 0;
+    transition: .4s linear;
+}
+.categories .container .content{
+    text-align: center;
+    background: #c79c70;
+    padding: 2rem;
+    transition: .4s linear;
+}
+.categories .container .content img{
+    margin: 1.5rem 0;
+}
+.categories .container .content h3{
+    font-size: 2.5rem;
+    color: black;
+}
+.categories .container .content p {
+    font-size: 1.6;
+    color: black;
+    padding: 1rem 0;
+}
+.categories .container:hover .image{
+    top: 0;
+}
+.categories .container:hover .content{
+    transform: translateY(100%);
+}
+
