@@ -24,8 +24,16 @@ body *{
 }
 
 /* budget deal starts */
+/* .budget {
+  background:
+    linear-gradient(rgba(203, 183, 183, 0.5), rgba(0,0,0,0.5)),
+    url('home-hero-scaled.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
 .budget{
-   content: "";
   position: absolute;
   inset: 0;
   background: 
@@ -288,3 +296,41 @@ h3 a {
     padding: 30px;
     background-color: #fdeee2;
 }
+/*Book now starts....*/
+/* .book {
+  position: fixed;         /* cover the entire screen */
+  inset: 0;
+  display: none;           /* hidden initially */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.book.open { display: flex; }
+/* .book {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 9999;
+} */
+.book .overlay{
+  position: fixed;
+  inset: 0;
+  background:rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  
+}
+.book .popup-content{
+  position: fixed;
+  z-index: 2;
+  width: 95%;
+  max-width: 350px;
+  background: #f3e3d2;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 2px 5px rgba(0, 0, 0, 0.5);
+  
+} 
