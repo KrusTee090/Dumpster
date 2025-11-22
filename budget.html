@@ -4,11 +4,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>BudgetDeal</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="budget.js" defer></script>
+  </head>
   <body>
      <header>
         <div class="container">
@@ -27,7 +29,7 @@
             </nav>
         </div>
     </header>
-  </head>
+  
     <div class ="budget" > 
          <h1 class="name text-center">BudgetDeal</h1>
         <section class="categories">
@@ -38,53 +40,83 @@
                     <img src="./pizza.jpg" alt="Pizza">
                     <h3>Pizza</h3>
                     <p>Price Range 300-600BDt</p>
+                    <button class="book-now-btn" id="openModalBtn">Book Now</button> 
                 </div>
+                <!-- Modal -->
+<div class="modal" id="bookModal">
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal-content">
+    <h3>Table Bookinh</h3>
+    <p>Hungry? Book your table now!</p>
+    <div class="modal-footer">
+      <button class="close-btn">Close</button>
+      <button class="book-btn">Book Now</button>
+    </div>
+  </div>
+</div>
                 <div class="category-card">
                     <img src="./burger and fries.avif" alt="Burgers">
                     <h3>Burgers</h3>
                     <p>Price Range 200-500BDt</p>
+                    <button class="book-now-btn" id="openModalBtn">Book Now</button> 
                      
                 </div>
-                <div class="category-card">
-                    <img src="./OIP.webp" alt="Sandwiches">
-                    <h3>Sandwiches</h3>
-                    <p>Price Range 150-300BDt</p> 
-                </div>
-                <div class="category-card">
-                    <img src="./burger and fries.avif" alt="Sandwiches">
-                    <h3>Burger and Fries</h3>
-                    <p>Price Range 300-600BDt</p>
-                </div>
+                <!-- Modal -->
+<div class="modal" id="bookModal">
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal-content">
+    <h3>Table Bookinh</h3>
+    <p>Hungry? Book your table now!</p>
+    <div class="modal-footer">
+      <button class="close-btn">Close</button>
+      <button class="book-btn">Book Now</button>
+    </div>
+  </div>
+</div>
                 <div class="category-card">
                     <img src="./mm.jpg" alt="Sandwiches">
-                    <h3>Sandwiches</h3>
+                    <h3>Mojito</h3>
+                    <p>Premium Cup</p>
+                    <p>Price Range 150-300BDt</p>
+                    <button class="book-now-btn" id="openModalBtn">Book Now</button> 
                 </div>
+                <!-- Modal -->
+<div class="modal" id="bookModal">
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal-content">
+    <h3>Table Bookinh</h3>
+    <p>Hungry? Book your table now!</p>
+    <div class="modal-footer">
+      <button class="close-btn">Close</button>
+      <button class="book-btn">Book Now</button>
+    </div>
+  </div>
+</div>
+                
                 <div class="category-card">
                     <img src="./chicken.webp" alt="Sandwiches">
-                    <h3>Sandwiches</h3>
+                    <h3>Broast chicken</h3>
+                    <p>WellFood</p>
+                    <p>Price Range 300-600BDt</p>
+                    <button class="book-now-btn" id="openModalBtn">Book Now</button> 
                 </div>
-                <div class="category-card">
-                    <img src="./pizza.jpg" alt="Sandwiches">
-                    <h3>Sandwiches</h3>
-                </div>
-                <div class="category-card">
-                    <img src="img/category/sandwich.jpg" alt="Sandwiches">
-                    <h3>Sandwiches</h3>
-                </div>
+                <!-- Modal -->
+<div class="modal" id="bookModal">
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal-content">
+    <h3>Table Bookinh</h3>
+    <p>Hungry? Book your table now!</p>
+    <div class="modal-footer">
+      <button class="close-btn">Close</button>
+      <button class="book-btn">Book Now</button>
+    </div>
+  </div>
+</div>
                 
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Items Section -->
-    <section class="featured">
-        <div class="container">
-            <h2>Featured Items</h2>
-            <div class="food-grid" id="featuredFoods">
-                <!-- Featured items will be loaded here by JavaScript -->
-            </div>
-        </div>
-    </section>
+                
+                
+                
+      
     
        
 
